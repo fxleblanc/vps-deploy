@@ -2,4 +2,4 @@
 #
 # Test script
 #
-ansible-playbook -i inventory/test playbook.yml
+ansible-playbook -vv -i inventory/test playbook.yml
