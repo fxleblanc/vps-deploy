@@ -4,9 +4,11 @@
   become_user: root
   become_method: sudo
   tasks:
-    - name: install lxc
+    # Needs lxc-dev for lxc-python2
+    # https://github.com/ansible/ansible-modules-extras/issues/550
+    - name: install lxc-dev
       apt:
-        name: lxc
+        name: lxc-dev
 
     - name: install pip2
       apt:
