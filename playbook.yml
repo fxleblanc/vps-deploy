@@ -1,9 +1,9 @@
 - name: setup vps
   hosts: vps
+  become: true
+  become_user: root
+  become_method: sudo
   tasks:
     - name: install lxc
       apt:
         name: lxc
-      become: true
-      become_user: root
-      become_method: sudo
