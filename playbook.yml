@@ -17,3 +17,9 @@
     - name: install lxc-python2
       pip:
         name: lxc-python2
+
+    - name: start jupyter container
+      lxc_container:
+        name: jupyter
+        template: debian
+        state: started
