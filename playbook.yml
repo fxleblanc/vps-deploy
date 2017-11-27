@@ -7,3 +7,7 @@
     - name: install lxc
       apt:
         name: lxc
+
+    - name: install pip2
+      apt:
+        name: python-pip
