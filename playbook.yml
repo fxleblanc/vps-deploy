@@ -30,9 +30,13 @@
       lxc_container:
         name: jupyter
         state: absent
+      tags:
+        - jupyter
     
     - name: start jupyter container
       lxc_container:
         name: jupyter
         template: debian
         state: started
+      tags:
+        - jupyter
