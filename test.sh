@@ -2,5 +2,5 @@
 #
 # Test script
 #
-options=$1
-ansible-playbook -vv $options -i inventory/test playbook.yml
+tags=$1
+ansible-playbook -vv --skip-tags $tags -i inventory/test playbook.yml
