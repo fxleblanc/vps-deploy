@@ -22,6 +22,10 @@
       apt:
         name: bridge-utils
 
+    - name: check if bridge already exists
+      shell: HAS_BRIDGE=$(ip a | grep br0); if [ ! -z $HAS_BRIDGE]; then echo "yes"; else echo "no"; fi
+      register: has_bridge
+
     - name: destroy jupyter container
       lxc_container:
         name: jupyter
