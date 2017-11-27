@@ -18,6 +18,11 @@
       pip:
         name: lxc-python2
 
+    - name: destroy jupyter container
+      lxc_container:
+        name: jupyter
+        state: absent
+    
     - name: start jupyter container
       lxc_container:
         name: jupyter
