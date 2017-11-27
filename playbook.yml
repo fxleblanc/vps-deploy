@@ -13,3 +13,7 @@
     - name: install pip2
       apt:
         name: python-pip
+
+    - name: install lxc-python2
+      pip:
+        name: lxc-python2
