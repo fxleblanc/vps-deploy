@@ -1,2 +1,5 @@
 # Vagrant folder
 .vagrant
+
+# Ansible retry files
+*.retry
