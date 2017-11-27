@@ -23,8 +23,12 @@
         name: bridge-utils
 
     - name: check if bridge already exists
-      shell: HAS_BRIDGE=$(ip a | grep br0); if [ ! -z $HAS_BRIDGE]; then echo "yes"; else echo "no"; fi
+      shell: HAS_BRIDGE=$(ip a | grep br0); if [ ! -z "$HAS_BRIDGE" ]; then echo "yes"; else echo "no"; fi
       register: has_bridge
+
+    - name: create the bridge
+      shell: brctl addbr br0
+      when: has_bridge.stdout.find("no") != -1
 
     - name: destroy jupyter container
       lxc_container:
