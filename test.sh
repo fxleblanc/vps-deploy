@@ -2,4 +2,5 @@
 #
 # Test script
 #
-ansible-playbook -vv -i inventory/test playbook.yml
+options=$1
+ansible-playbook -vv $options -i inventory/test playbook.yml
