@@ -29,6 +29,10 @@
     - name: create the bridge
       shell: brctl addbr br0
       when: has_bridge.stdout.find("no") != -1
+    
+    - name: check if bridge has the interfaces
+      shell: HAS_IFS=$(brctl show | tail -n1 | cut -f5 | tr -d [[:space:]]); if [ ! -z "$HAS_IFS" ]; then echo "yes"; else echo "no"; fi
+      register: has_interfaces
 
     - name: destroy jupyter container
       lxc_container:
