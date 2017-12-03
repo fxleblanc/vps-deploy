@@ -4,7 +4,7 @@
 #
 
 # Destroy and start vagrant machine
-if [ $1 == "clean" ]
+if [ "$1" = "clean" ]
 then
     vagrant destroy -f && vagrant up
 fi
