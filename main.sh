@@ -5,5 +5,4 @@
 echo "Updating apt cache"
 sudo apt-get update -y
 
-echo "Installing lxc"
-sudo apt-get install -y lxc
+source scripts/setup-lxc.sh
