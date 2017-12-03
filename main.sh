@@ -2,4 +2,5 @@
 #
 # Main deployment script
 #
-echo "Deploying..."
+echo "Updating apt cache"
+sudo apt-get update -y
