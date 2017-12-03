@@ -3,4 +3,9 @@
 # Test script
 #
 tags=$1
-ansible-playbook -vv --skip-tags $tags -i inventory/test playbook.yml
+if [ -z $tags ]
+then
+    ansible-playbook -vv -i inventory/test playbook.yml
+else
+    ansible-playbook -vv --skip-tags $tags -i inventory/test playbook.yml
+fi
