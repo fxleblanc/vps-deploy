@@ -7,4 +7,6 @@ Vagrant.configure(2) do |config|
   # Ensure that all Vagrant machines will use the same SSH key pair.
   # See https://github.com/mitchellh/vagrant/issues/5005
   config.ssh.insert_key = false
+
+  config.vm.network "private_network", ip: "192.168.50.2"
 end
