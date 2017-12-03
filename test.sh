@@ -2,10 +2,4 @@
 #
 # Test script
 #
-tags=$1
-if [ -z $tags ]
-then
-    ansible-playbook -vv -i inventory/test playbook.yml
-else
-    ansible-playbook -vv --skip-tags $tags -i inventory/test playbook.yml
-fi
+ssh -p 2222 -i ~/.vagrant.d/insecure_private_key -o 'IdentitiesOnly=yes' vagrant@127.0.0.1 'bash -s' < main.sh
