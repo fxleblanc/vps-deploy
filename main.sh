@@ -7,3 +7,4 @@ sudo apt-get update -y
 
 # Source install scripts
 source scripts/setup-lxc.sh
+source scripts/setup-jupyter-container.sh
