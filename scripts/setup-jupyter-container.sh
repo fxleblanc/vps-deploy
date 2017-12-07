@@ -19,6 +19,9 @@ lxc.include = /usr/share/lxc/config/debian.common.conf
 lxc.tty = 4
 lxc.utsname = jupyter
 lxc.arch = amd64
+
+# Autostart
+lxc.start.auto = 1
 EOF
 
 echo "Staring jupyter container"
