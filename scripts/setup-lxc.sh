@@ -13,3 +13,6 @@ lxc.network.link = lxcbr0
 lxc.network.flags = up
 lxc.network.hwaddr = 00:16:3e:xx:xx:xx
 EOF
+
+echo "Restarting lxc-net service"
+sudo service lxc-net restart
