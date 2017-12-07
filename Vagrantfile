@@ -8,5 +8,4 @@ Vagrant.configure(2) do |config|
   # See https://github.com/mitchellh/vagrant/issues/5005
   config.ssh.insert_key = false
 
-  config.vm.network "private_network", ip: "192.168.50.2"
 end
