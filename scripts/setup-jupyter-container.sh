@@ -20,3 +20,6 @@ lxc.tty = 4
 lxc.utsname = jupyter
 lxc.arch = amd64
 EOF
+
+echo "Staring jupyter container"
+sudo lxc-start --name jupyter -d
