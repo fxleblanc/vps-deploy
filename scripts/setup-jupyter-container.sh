@@ -26,3 +26,9 @@ EOF
 
 echo "Staring jupyter container"
 sudo lxc-start --name jupyter -d
+
+echo "Copying container provisionning script"
+sudo cp scripts/jupyter-provisionning.sh /var/lib/lxc/jupyter/rootfs/tmp/provisionning.sh
+
+echo "Launching provisionning script"
+sudo lxc-attach -n jupyter -- /tmp/provisionning.sh
